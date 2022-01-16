@@ -1,2 +1,2 @@
 datasource:
-  url: jdbc:mysql://localhost:3306/expressway?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true
+  url: jdbc:mysql://localhost:3306/expressway?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true?
