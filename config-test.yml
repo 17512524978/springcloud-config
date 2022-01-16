@@ -1,4 +1,68 @@
 server:
   port: 5004
-datasource:
-  url: jdbc:mysql://localhost:3306/expressway?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true?
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+#    url: jdbc:mysql://172.18.34.155:3306/smart_site_test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+#    username: smartsitetest
+#    password: TAn$sshuER$7
+    filters: sta
+    maxActive: 20
+    initialSite: 1
+    maxWait: 60000
+    minIdle: 1
+#  cache:
+#    type: redis
+#  redis:
+#    database: 0
+#    host: 172.18.34.150
+#    port: 6379
+#    password: 123456
+#    timeout: 10000ms
+#    lettuce:
+#      pool:
+#        max-active: 10
+#        max-idle: 10
+#        min-idle: 5
+#        max-wait: 10000ms
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+mybatis:
+  type-aliases-package: org.fiberhome.deviceinterface.bean
+  configuration:
+    map-underscore-to-camel-case: true
+
+#ftp:
+#  host: 172.18.34.152
+#  port: 21
+#  name: anonymous
+#  password:
+#  url: http://ss.fhxynet.com:7084
+#
+#logging:
+#  level:
+#    org:
+#      fiberhome: debug
+##  file: deviceinterface.log
+#
+#envir:
+#  pmtpf: 75.0
+#  pmten: 150.0
+#  tsp: 300.0
+#  noise: 90.0
+#  temperature: 40.0
+#
+#params:
+#  websocketUrl: http://ss.fhxynet.com:5004/api/websocket/send_message
+#
+##明珠湾管理局数据推送数据相关配置
+#mzwq:
+#  name: 中交人员
+#  pwd: 123
+#  url:
+#    token: http://117.107.138.115:9018/EcaWebServer/EcaServices/EcaAppServer/Login
+#    method: http://117.107.138.115:9018/EcaWebServer/EcaServices/EcaDockServer/DataPushFromZJ
