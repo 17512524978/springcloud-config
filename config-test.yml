@@ -1,2 +1,4 @@
-datasource:
-  url: jdbc:mysql://localhost:3306/expressway?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true?
+server:
+  port: 5004
+  datasource:
+    url: jdbc:mysql://localhost:3306/expressway?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true?
